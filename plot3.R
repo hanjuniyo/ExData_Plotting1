@@ -14,11 +14,14 @@ axis_labels <- format(axis_ticks, "%a")
 png("plot3.png", width=480, height=480)
 
 # 1. draw black line
-plot(date_time, sub_data$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
+plot(date_time, sub_data$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering", xaxt="n")
 # 2. draw red line
 lines(date_time, sub_data$Sub_metering_2, col="red")
 # 3. draw blue line
 lines(date_time, sub_data$Sub_metering_3, col="blue")
+
+#Thu, Fri, Sat
+axis(1, at=axis_ticks, labels=axis_labels)
 
 # Legend
 legend("topright", 

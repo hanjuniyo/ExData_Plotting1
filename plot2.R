@@ -18,7 +18,6 @@ plot(date_time, sub_data$Global_active_power,
      type="l", 
      xlab="", 
      ylab="Global Active Power (kilowatts)",
-     xaxt="n"
-)
+     xaxt="n")
 axis(1, at=axis_ticks, labels=axis_labels)
 dev.off()
